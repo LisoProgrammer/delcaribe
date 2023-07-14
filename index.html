@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/media-query.css">
+    <title>Del Caribe | Menú</title>
+</head>
+<body>
+    <header>
+        <div class="h-ele">
+            <img src="assets/delcaribe_logo.jpg" alt="Logo" width="100%">
+        </div>
+        <div class="h-ele">
+            <button id="bmenu">
+                <img src="assets/menu.png" alt="bmenu" width="60%">
+            </button>
+        </div>
+    </header>
+    <div class="cloader" id="cloader">
+        <div class="loader">
+            <img src="assets/delcaribe_logo.jpg" alt="Logo" width="80px">
+        </div>
+        <p>Cargando menú...</p>
+    </div>
+    <div class="capa_pri" id="capa_pri">
+        <div class="capa_sec" id="capa_sec">
+            <div class="subheader">
+                <div>
+                    <h3>Ordenar</h3>
+                </div>
+                <div>
+                    <button class="button_closer" id="closer_orden">×</button>
+                </div>
+            </div>
+            <div>
+                <div class="flex space-between">
+                    <div><h4>Nombre del producto: </h4></div>
+                    <div><h4 id="name_prod"></h4></div>
+                </div>
+                
+                <div class="flex space-between">
+                    <div>
+                      <h4>Precio: </h4>  
+                    </div>
+                    <div class="flex" style="width: auto !important;">
+                        <div>
+                            <h4>$</h4>
+                        </div>
+                        <div>
+                            <h4 id="precio">0</h4>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <form action="https://depauperate-adaptio.000webhostapp.com/delcaribe_response_prod_selected.php" method="get" id="form-ordenar">
+                <div>
+                    <h4>Mesa</h4>
+                    <div class="alert inv" id="alert_mesa">
+                    </div>
+                    <select name="mesa" id="select_mesa">
+                        
+                    </select>
+                </div>
+                <div>
+                    <div class="flex space-between" style="width: auto !important;">
+                        <div>
+                            <h4>Total: </h4>
+                        </div>
+                        <div class="flex" style="width: auto !important;">
+                            <div >
+                                <h4>$</h4>
+                            </div>
+                            <div>
+                               <h4 id="total">0</h4> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <h4>Cantidad</h4>
+                    <div class="alert inv" id="alert_cantidad">
+
+                    </div>
+                    <input type="number" name="cant" id="cant" min="0" value="0">
+                </div>
+                <div class="alert inv" id="alert_form_sent_qual">
+
+                </div>
+                <div class="flex center">
+                   <input type="submit" value="ORDENAR"> 
+                </div>
+                <input type="datetime-local" name="datetime" id="datetime-local" hidden>
+                <input type="text" name="code_prod" id="input_code" hidden>
+            </form>
+
+        </div>
+    </div>
+    <div class="content">
+        <h1>Menú</h1>
+        <h3>Entradas</h3>
+        <div id="ent">
+            <!--<div class="tar">
+                <div class="subcontent">
+                    <div class="ctext">
+                        <h4>Pescado frito con arroz de coco</h4>
+                        <p class="des">
+                        Incluye pescado, arroz de coco, patacones y ensalada.
+                        </p> 
+                        <div class="cprecio">
+                            <p>$</p>
+                            <p class="precio">15,000</p>
+                        </div>
+                    </div>
+                    <div class="cimg">
+                        <img src="menu/assets/ent01.webp" alt="plato" width="100%">
+                    </div>
+                </div>
+                <div class="cbutton">
+                    <button class="ord">ORDENAR</button>
+                </div>
+                
+            </div>-->
+        </div>
+
+        <h3>Platos fuertes</h3>
+        <div id="plf"></div>
+
+        <h3>Postres</h3>
+        <div id="pos"></div>
+
+        <h3>Bebidas</h3>
+        <div id="beb"></div>
+    </div>
+    <footer>
+        
+    </footer>
+    <script async src="js/index.js"></script>
+    <script src="js/menu_header.js"></script>
+</body>
+</html>
